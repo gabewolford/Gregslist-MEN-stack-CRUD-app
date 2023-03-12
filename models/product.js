@@ -1,1 +1,24 @@
 // Creates the Product model
+
+// Require the Mongoose package
+const mongoose = require('mongoose');
+
+// Schema to define the properties of the products collection
+const productSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    city: { type: String, required: true },
+    state: { type: String},
+    country: { type: String, required: true },
+    category: { type: String, required: true },
+    photo: { type: String, required: true },
+    condition: { type: String, required: true },
+    askingPrice: { type: Number, required: true },
+    quantity: { type: Number, required: true },
+    isFeatured: { type: Boolean, required: true }
+})
+
+
+// Schema exported as a Monogoose model
+// The Mongoose model will be accessed in `models/index.js`
+module.exports = mongoose.model('Product', productSchema);

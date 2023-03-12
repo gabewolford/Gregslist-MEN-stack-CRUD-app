@@ -11,3 +11,8 @@ const mongodbUri = process.env.MONGODBURI;
     await mongoose.connect(mongodbUri);
     console.log('Mongoose is connected to', mongodbUri);
 })().catch(err => console.log('MongoDB connection error:\n' + err))
+
+
+module.exports = {
+    Product: require('./product')
+}
