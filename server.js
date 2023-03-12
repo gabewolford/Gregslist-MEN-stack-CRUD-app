@@ -35,8 +35,24 @@ app.use(connectLiveReload());
 
 
 // Mount routes
+// _________________________________________________
 app.get('/', function (req, res) {
     res.send('Gregslist')
+});
+
+// When a GET requets is send to '/seed', the products collection is seeded in the database
+app.get('/seed', function (req, res) {
+    // Remove any exisisting products
+    db.Product.deleteMany({})
+        .then(removedProducts => {
+            console.log(`Removed ${removedProducts.deletedCount} products`)
+            // Seed the products collection with the seed data
+            db.Product.insertMany(db.seedProducts)
+                .then(addedProducts => {
+                    console.log(`Added ${addedProducts.length} products to be sold`)
+                    res.json(addedProducts)
+                })
+        })
 });
 
 

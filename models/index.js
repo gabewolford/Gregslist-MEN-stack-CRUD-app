@@ -13,6 +13,8 @@ const mongodbUri = process.env.MONGODBURI;
 })().catch(err => console.log('MongoDB connection error:\n' + err))
 
 
+// Export models and seed data to `server.js`
 module.exports = {
-    Product: require('./product')
+    Product: require('./product'),
+    seedProducts: require('./seed')
 }
