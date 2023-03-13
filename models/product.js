@@ -15,7 +15,7 @@ const productSchema = new mongoose.Schema({
     condition: { type: String, required: true },
     askingPrice: { type: String, required: true },
     quantity: { type: Number, required: true },
-    isFeatured: { type: Boolean, required: true }
+    isFeatured: { type: Boolean }
 })
 
 
