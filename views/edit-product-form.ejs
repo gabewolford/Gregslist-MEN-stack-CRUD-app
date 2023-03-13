@@ -9,34 +9,34 @@
 
         <form method="POST" action="/products/<%= product._id %>?_method=PUT">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" value="<%= product.name %>" required>
           
             <label for="description">Description</label>
-            <textarea id="description" name="description" required></textarea>
+            <textarea id="description" name="description" required><%= product.description %></textarea>
           
             <label for="city">City</label>
-            <input type="text" id="city" name="city" required>
+            <input type="text" id="city" name="city" value="<%= product.city %> "required>
           
             <label for="state">State</label>
-            <input type="text" id="state" name="state">
+            <input type="text" id="state" value="<%= product.state %>" name="state">
           
             <label for="country">Country</label>
-            <input type="text" id="country" name="country" required>
+            <input type="text" id="country" name="country" value="<%= product.country %>" required>
           
             <label for="category">Category</label>
-            <input type="text" id="category" name="category" required>
+            <input type="text" id="category" name="category" value="<%= product.category %>" required>
           
             <label for="photo">Photo</label>
-            <input type="text" id="photo" name="photo" required>
+            <input type="text" id="photo" name="photo" value="<%= product.photo %>" required>
           
             <label for="condition">Condition</label>
-            <input type="text" id="condition" name="condition" required>
+            <input type="text" id="condition" name="condition" value="<%= product.condition %>" required>
           
             <label for="askingPrice">Asking Price</label>
-            <input type="text" id="askingPrice" name="askingPrice" required>
+            <input type="text" id="askingPrice" name="askingPrice" value="<%= product.askingPrice %>" required>
           
             <label for="quantity">Quantity</label>
-            <input type="number" id="quantity" name="quantity" required>
+            <input type="number" id="quantity" name="quantity" value="<%= product.quantity %>" required>
           
             <label for="isFeatured">Featured?</label>
             <input type="checkbox" id="isFeatured" name="isFeatured" value="true" required>

@@ -7,7 +7,7 @@
     <%- include('./partials/nav.ejs') %>
     <main>
 
-        <div>
+        <div class="row">
                 <img src="<%= product.photo %>">
                 <h4><%= product.name %> - <%= product.condition %></h4>
                 <p>$<%= product.askingPrice %></p>
@@ -15,7 +15,12 @@
                 <p><%= product.country %></p>
                 <p>Available: <%= product.quantity %></p>
                 <p><%= product.description %></p>
+        </div>
 
+        <div>
+            <button class="btn"><a href="/products/<%= product._id %>/edit">Edit</a></button>
+            <form method="POST" action="/products/<%= product._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
         </div>
         
     </main>

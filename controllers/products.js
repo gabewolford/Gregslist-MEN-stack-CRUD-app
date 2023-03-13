@@ -59,7 +59,9 @@ router.get('/:id', function (req, res) {
 router.get('/:id/edit', function (req, res) {
     db.Product.findById(req.params.id)
         .then(product => {
-            res.send('This is where you will edit exisiting product ' + product._id)
+            res.render('edit-product-form', {
+                product: product
+            })
         })
 })
 
