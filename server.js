@@ -40,7 +40,7 @@ app.use(connectLiveReload());
 
 // ROUTES
 app.get('/', function (req, res) {
-    res.send('Gregslist')
+    res.send('Welcome to Gregslist')
 });
 
 // When a GET request is send to '/seed', the products collection is seeded in the database
