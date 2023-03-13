@@ -83,7 +83,9 @@ router.put('/:id', function (req, res) {
 // the URL parameter (which is always the product document's id)
 router.delete('/:id', function (req, res) {
     db.Product.findByIdAndRemove(req.params.id)
-        .then(product => res.send('You have deleted product ' + product._id))
+        .then(product => {
+            res.redirect('/products')
+        })
 })
 
 // Export routes so they are accessible is `server.js`
