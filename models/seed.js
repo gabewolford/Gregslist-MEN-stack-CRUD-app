@@ -76,7 +76,7 @@ const products = [
       condition: "New",
       askingPrice: "18,900,000",
       quantity: 1,
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: "Skyscraper",
@@ -89,7 +89,7 @@ const products = [
       condition: "New",
       askingPrice: "1,400,000,000",
       quantity: 1,
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: "French Mountain Chalet",
