@@ -75,7 +75,7 @@ router.put('/:id', function (req, res) {
         { new: true }
     )
         .then(product => {
-            res.json(product)
+            res.redirect('/products/' + product._id)
         })
 })
 
