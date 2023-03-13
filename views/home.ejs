@@ -10,7 +10,7 @@
         <section>
             <div>
                 <h1>Welcome to Greglist</h1>
-                <p>Experience luxury shopping like never before on the platform for people who pulled themselves up by their bootstraps.</p>
+                <p>Experience luxury shopping like never before on the platform exclusively for people who pulled themselves up by their bootstraps.</p>
             </div>
         </section>
 
@@ -22,6 +22,7 @@
                     <h4><%= product.name %></h4>
                     <p><%= product.description %></p>
                     <p>$<%= product.askingPrice %></p>
+                    <a href="/products/<%= product.id %>">Details</a>
                 <% } %>
             </div>
         </section>

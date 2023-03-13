@@ -19,7 +19,9 @@ const db = require('../models')
 router.get('/', function (req, res) {
     db.Product.find({})
         .then(products => {
-            res.json('products')
+            res.render('product-index', {
+                products: products
+            })
         })
 })
 
@@ -27,7 +29,11 @@ router.get('/', function (req, res) {
 // using the URL parameter (document _id)
 router.get('/:id', function (req, res) {
     db.Product.findById(req.params.id)
-        .then(product => res.json(product))
+        .then(product => {
+            res.render('product-details', {
+                product: product
+            })
+        })
         .catch(() => res.send('404 Error: Page Not Found'))
 })
 

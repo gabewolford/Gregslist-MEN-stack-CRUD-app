@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs', {title: `${product.name} | Gregslist`}) %>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+
+        <div>
+                <img src="<%= product.photo %>">
+                <h4><%= product.name %> - <%= product.condition %></h4>
+                <p>$<%= product.askingPrice %></p>
+                <p><%= product.city %> <%= product.state %></p>
+                <p><%= product.country %></p>
+                <p>Available: <%= product.quantity %></p>
+                <p><%= product.description %></p>
+
+        </div>
+        
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
