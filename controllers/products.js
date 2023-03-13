@@ -38,7 +38,7 @@ router.get('/new', function (req, res) {
 router.post('/', function (req, res) {
     db.Product.create(req.body)
         .then(product => {
-            res.json(product)
+            res.redirect('/products/' + product._id)
         })
 })
 
