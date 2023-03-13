@@ -70,7 +70,7 @@ app.get('/seed', function (req, res) {
 
 // Render the about page
 app.get('/about', function (req, res) {
-    res.send('You have hit the about route')
+    res.render('about')
 });
 
 // This tells our app to look at the `controllers/products.js` file
@@ -80,7 +80,7 @@ app.use('/products', productsCtrl)
 
 // Catch all route for anything that doesn't match above routes
 app.get('*', function (req, res) {
-    res.send('404 Error: Page Was Not Found')
+    res.render('404')
 })
 
 
