@@ -39,8 +39,11 @@
             <input type="number" id="quantity" name="quantity" value="<%= product.quantity %>" required>
           
             <label for="isFeatured">Featured?</label>
-            <input type="checkbox" id="isFeatured" name="isFeatured" value="<%= product.isFeatured %>">
-          
+            <input type="checkbox" id="isFeatured" name="isFeatured"
+                <% if ( product.isFeatured === true ) { %> 
+                    checked>
+                <% } %>
+            >
             <button type="submit">Save Changes</button>
           </form>
 
