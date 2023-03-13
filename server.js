@@ -68,12 +68,20 @@ app.get('/seed', function (req, res) {
         })
 });
 
-
+// Render the about page
+app.get('/about', function (req, res) {
+    res.send('You have hit the about route')
+});
 
 // This tells our app to look at the `controllers/products.js` file
 // to handle all routes that begin with `localhost:3000/products`
 app.use('/products', productsCtrl)
 
+
+// Catch all route for anything that doesn't match above routes
+app.get('*', function (req, res) {
+    res.send('404 Error: Page Was Not Found')
+})
 
 
 // Tell the app to listen on the specified port

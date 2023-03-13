@@ -12,6 +12,7 @@ const router = express.Router()
 
 // Require the db connection & models
 const db = require('../models')
+const product = require('../models/product')
 
 
 // ROUTES
@@ -62,6 +63,26 @@ router.get('/:id/edit', function (req, res) {
         })
 })
 
+// Update Route (PUT/Update): This route receives the PUT request sent from
+// the edit route, edits the specified product document using the form data,
+// and redirects the user back to the show page with the updated product
+router.put('/:id', function (req, res) {
+    db.Product.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+    )
+        .then(product => {
+            res.json(product)
+        })
+})
+
+// Destroy Route (DELETE/Delete): This route deletes a product document using
+// the URL parameter (which is always the product document's id)
+router.delete('/:id', function (req, res) {
+    db.Product.findByIdAndRemove(req.params.id)
+        .then(product => res.send('You have deleted product ' + product._id))
+})
 
 // Export routes so they are accessible is `server.js`
 module.exports = router
