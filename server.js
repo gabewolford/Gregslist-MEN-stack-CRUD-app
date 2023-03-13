@@ -10,6 +10,10 @@ const connectLiveReload = require("connect-livereload");
 const db = require('./models');
 
 
+// Require the routes in the controllers folder
+const productsCtrl = require('./controllers/products')
+
+
 // Create the Express app
 const app = express();
 
@@ -34,13 +38,12 @@ app.use(express.static('public'))
 app.use(connectLiveReload());
 
 
-// Mount routes
-// _________________________________________________
+// ROUTES
 app.get('/', function (req, res) {
     res.send('Gregslist')
 });
 
-// When a GET requets is send to '/seed', the products collection is seeded in the database
+// When a GET request is send to '/seed', the products collection is seeded in the database
 app.get('/seed', function (req, res) {
     // Remove any exisisting products
     db.Product.deleteMany({})
@@ -54,6 +57,13 @@ app.get('/seed', function (req, res) {
                 })
         })
 });
+
+
+
+// This tells our app to look at the `controllers/products.js` file
+// to handle all routes that begin with `localhost:3000/products`
+app.use('/products', productsCtrl)
+
 
 
 // Tell the app to listen on the specified port
