@@ -24,19 +24,31 @@
             <input type="text" id="country" name="country" required>
           
             <label for="category">Category</label>
-            <input type="text" id="category" name="category" required>
+            <select id="category" name="category" required>
+                <option value="">Select One</option>
+                <option value="yachts" <% if (product.category === 'yachts') { %>selected<% } %>>Yachts</option>
+                <option value="private jets" <% if (product.category === 'private jets') { %>selected<% } %>>Private Jets</option>
+                <option value="luxury cars" <% if (product.category === 'luxury cars') { %>selected<% } %>>Luxury Cars</option>
+                <option value="private islands" <% if (product.category === 'private islands') { %>selected<% } %>>Private Islands</option>
+                <option value="residences" <% if (product.category === 'residences') { %>selected<% } %>>Residences</option>
+            </select>
           
             <label for="photo">Photo</label>
             <input type="text" id="photo" name="photo" required>
           
             <label for="condition">Condition</label>
-            <input type="text" id="condition" name="condition" required>
+            <select id="condition" name="condition" required>
+                <option value="">Select One</option>
+                <option value="new" <% if (product.condition === 'new') { %>selected<% } %>>New</option>
+                <option value="excellent" <% if (product.condition === 'excellent') { %>selected<% } %>>Excellent</option>
+                <option value="good" <% if (product.condition === 'good') { %>selected<% } %>>Good</option>
+            </select>
           
             <label for="askingPrice">Asking Price</label>
             <input type="text" id="askingPrice" name="askingPrice" required>
           
             <label for="quantity">Quantity</label>
-            <input type="number" id="quantity" name="quantity" required>
+            <input type="number" id="quantity" name="quantity" min=0 required>
           
             <label for="isFeatured">Featured?</label>
             <input type="checkbox" id="isFeatured" name="isFeatured" value="true">

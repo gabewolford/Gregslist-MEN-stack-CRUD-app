@@ -24,26 +24,34 @@
             <input type="text" id="country" name="country" value="<%= product.country %>" required>
           
             <label for="category">Category</label>
-            <input type="text" id="category" name="category" value="<%= product.category %>" required>
+            <select id="category" name="category" required>
+                <option value="yachts" <% if (product.category === 'yachts') { %>selected<% } %>>Yachts</option>
+                <option value="private jets" <% if (product.category === 'private jets') { %>selected<% } %>>Private Jets</option>
+                <option value="luxury cars" <% if (product.category === 'luxury cars') { %>selected<% } %>>Luxury Cars</option>
+                <option value="private islands" <% if (product.category === 'private islands') { %>selected<% } %>>Private Islands</option>
+                <option value="residences" <% if (product.category === 'residences') { %>selected<% } %>>Residences</option>
+            </select>
           
             <label for="photo">Photo</label>
             <input type="text" id="photo" name="photo" value="<%= product.photo %>" required>
           
             <label for="condition">Condition</label>
-            <input type="text" id="condition" name="condition" value="<%= product.condition %>" required>
+            <select id="condition" name="condition" required>
+                <option value="new" <% if (product.condition === 'new') { %>selected<% } %>>New</option>
+                <option value="excellent" <% if (product.condition === 'excellent') { %>selected<% } %>>Excellent</option>
+                <option value="good" <% if (product.condition === 'good') { %>selected<% } %>>Good</option>
+            </select>
           
             <label for="askingPrice">Asking Price</label>
             <input type="text" id="askingPrice" name="askingPrice" value="<%= product.askingPrice %>" required>
           
             <label for="quantity">Quantity</label>
-            <input type="number" id="quantity" name="quantity" value="<%= product.quantity %>" required>
+            <input type="number" id="quantity" name="quantity" min=0 value="<%= product.quantity %>" required>
           
             <label for="isFeatured">Featured?</label>
-            <input type="checkbox" id="isFeatured" name="isFeatured"
-                <% if ( product.isFeatured === true ) { %> 
-                    checked>
-                <% } %>
-            >
+            <input type="checkbox" id="isFeatured" name="isFeatured"<% if (product.isFeatured === true) { %> checked <% } %> >
+                
+
             <button type="submit">Save Changes</button>
           </form>
 

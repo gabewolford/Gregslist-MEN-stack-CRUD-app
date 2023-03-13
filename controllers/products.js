@@ -29,7 +29,9 @@ router.get('/', function (req, res) {
 // New Route (GET/Read): This route renders a form for user to
 // fill out to POST (create) a new listing
 router.get('/new', function (req, res) {
-    res.render('new-product-form')
+    res.render('new-product-form', {
+        product: product
+    })
 })
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
