@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs', {title: 'Greglist'}) %>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+
+        <section>
+            <div>
+                <h1>Welcome to Greglist</h1>
+                <p>Experience luxury shopping like never before on the platform for people who pulled themselves up by their bootstraps.</p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h3>Featured</h3>
+                <% for (let product of products) { %>
+                    <img src="<%= product.photo %>" alt="product">
+                    <h4><%= product.name %></h4>
+                    <p><%= product.description %></p>
+                    <p>$<%= product.askingPrice %></p>
+                <% } %>
+            </div>
+        </section>
+
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

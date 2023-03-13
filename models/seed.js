@@ -7,9 +7,9 @@ const products = [
       state: null,
       country: "Italy",
       category: "Yachts",
-      photo: "https://en.wikipedia.org/wiki/A_%28sailing_yacht%29#/media/File:White_Pearl_A_Seite.JPG",
+      photo: "https://cdn.boatinternational.com/convert/bi_prd/bi/library_images/cqEHouBoQGOmVipsBrBz_Sailing-Yacht-A-superyacht-in-Sardinia.jpg/r%5Bwidth%5D=1920/cqEHouBoQGOmVipsBrBz_Sailing-Yacht-A-superyacht-in-Sardinia.webp",
       condition: "Used",
-      askingPrice: 500000000,
+      askingPrice: "500,000,000",
       quantity: 1,
       isFeatured: true
     },
@@ -22,7 +22,7 @@ const products = [
       category: "Private Jets",
       photo: "https://jetsetters-aviation.com/wp-content/uploads/BBJ.jpeg",
       condition: "Used",
-      askingPrice: 100000000,
+      askingPrice: "100,000,000",
       quantity: 3,
       isFeatured: true
     },
@@ -35,7 +35,7 @@ const products = [
       category: "Private Islands",
       photo: "https://media.cntraveler.com/photos/61a7ee7ace5a389d35064e81/master/w_1600,c_limit/Moskito%20Island_Moskito%20Island%20aerial%20(2).jpg",
       condition: "Used",
-      askingPrice: 100000000,
+      askingPrice: "100,000,000",
       quantity: 1,
       isFeatured: true
     },
@@ -48,9 +48,9 @@ const products = [
       category: "Yachts",
       photo: "https://media.cnn.com/api/v1/images/stellar/prod/170505161720-the-world-in-ross-sea.jpg?q=x_711,y_315,h_1432,w_2546,c_crop/h_720,w_1280",
       condition: "Used",
-      askingPrice: 75000000,
+      askingPrice: "75,000,000",
       quantity: 1,
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: "The Serengeti House",
@@ -61,7 +61,7 @@ const products = [
       category: "Residences",
       photo: "https://singitacdn.s3.eu-west-1.amazonaws.com/library/wp-content/uploads/Singita-Malilangwe-House-Aerial-View-1024x768.jpg",
       condition: "New",
-      askingPrice: 15000000,
+      askingPrice: "15,000,000",
       quantity: 1,
       isFeatured: false
     },
@@ -74,7 +74,7 @@ const products = [
       category: "Luxury Cars",
       photo: "https://www.motortrend.com/uploads/sites/5/2019/03/Bugatti-La-Voiture-Noire-6.jpg?fit=around%7C770:481.25",
       condition: "New",
-      askingPrice: 18900000,
+      askingPrice: "18,900,000",
       quantity: 1,
       isFeatured: true
     },
@@ -85,9 +85,9 @@ const products = [
       state: "New York",
       country: "USA",
       category: "Residences",
-      photo: "https://d36tnp772eyphs.cloudfront.net/blogs/1/2019/01/manhattan-skyline-new-york-city-usa-iStock-914218078-1200x801.jpg",
+      photo: "https://www.slcearch.com/content/uploads/2018/12/220-Central-Park_1-1024x768.jpg",
       condition: "New",
-      askingPrice: 1400000000,
+      askingPrice: "1,400,000,000",
       quantity: 1,
       isFeatured: true
     },
@@ -100,7 +100,7 @@ const products = [
       category: "Residences",
       photo: "https://static01.nyt.com/images/2022/11/23/realestate/23IHH-Alps-01/23IHH-Alps-superJumbo.jpg?quality=75&auto=webp",
       condition: "New",
-      askingPrice: 4200000,
+      askingPrice: "4,200,000",
       quantity: 1,
       isFeatured: false
     }

@@ -40,7 +40,12 @@ app.use(connectLiveReload());
 
 // ROUTES
 app.get('/', function (req, res) {
-    res.send('Welcome to Gregslist')
+    db.Product.find({ isFeatured: true })
+    .then(products => {
+        res.render('home', {
+            products: products
+        })
+    })
 });
 
 // When a GET request is send to '/seed', the products collection is seeded in the database
