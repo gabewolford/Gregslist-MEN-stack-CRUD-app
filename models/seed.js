@@ -11,7 +11,8 @@ const products = [
       condition: "excellent",
       askingPrice: "500,000,000",
       quantity: 1,
-      isFeatured: true
+      isFeatured: true,
+      dateListed: "2022-11-01T10:00:00.000Z"
     },
     {
       name: "Boeing Business Jet",
@@ -24,7 +25,8 @@ const products = [
       condition: "good",
       askingPrice: "100,000,000",
       quantity: 3,
-      isFeatured: true
+      isFeatured: true,
+      dateListed: "2022-11-01T10:00:00.000Z"
     },
     {
       name: "Necker Island",
@@ -37,7 +39,8 @@ const products = [
       condition: "excellent",
       askingPrice: "100,000,000",
       quantity: 1,
-      isFeatured: true
+      isFeatured: true,
+      dateListed: "2022-11-01T10:00:00.000Z"
     },
     {
       name: "The World",
@@ -50,7 +53,8 @@ const products = [
       condition: "good",
       askingPrice: "75,000,000",
       quantity: 1,
-      isFeatured: false
+      isFeatured: false,
+      dateListed: "2022-11-01T10:00:00.000Z"
     },
     {
       name: "The Serengeti House",
@@ -63,7 +67,8 @@ const products = [
       condition: "excellent",
       askingPrice: "15,000,000",
       quantity: 1,
-      isFeatured: false
+      isFeatured: false,
+      dateListed: "2022-11-01T10:00:00.000Z"
     },
     {
       name: "Bugatti La Voiture Noire",
@@ -76,7 +81,8 @@ const products = [
       condition: "new",
       askingPrice: "18,900,000",
       quantity: 1,
-      isFeatured: false
+      isFeatured: false,
+      dateListed: "2022-11-01T10:00:00.000Z"
     },
     {
       name: "Skyscraper",
@@ -89,7 +95,8 @@ const products = [
       condition: "good",
       askingPrice: "1,400,000,000",
       quantity: 1,
-      isFeatured: false
+      isFeatured: false,
+      dateListed: "2022-11-01T10:00:00.000Z"
     },
     {
       name: "French Mountain Chalet",
@@ -102,7 +109,8 @@ const products = [
       condition: "new",
       askingPrice: "4,200,000",
       quantity: 1,
-      isFeatured: false
+      isFeatured: false,
+      dateListed: "2022-11-01T10:00:00.000Z"
     }
   ];
   
