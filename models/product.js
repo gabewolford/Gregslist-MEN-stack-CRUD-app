@@ -27,7 +27,7 @@ const productSchema = new mongoose.Schema({
     },
     category: { 
         type: String, 
-        enum: ['yachts', 'private jets', 'luxury cars', 'private islands', 'residences'],
+        enum: ['Yachts', 'Private Jets', 'Luxury Cars', 'Private Islands', 'Residences'],
         required: true 
     },
     photo: { 
@@ -35,7 +35,7 @@ const productSchema = new mongoose.Schema({
         required: true },
     condition: { 
         type: String, 
-        enum: ['new', 'excellent', 'good'],
+        enum: ['New', 'Excellent', 'Good'],
         required: true 
     },
     askingPrice: { 
@@ -51,7 +51,8 @@ const productSchema = new mongoose.Schema({
     },
     dateListed: { 
         type: Date, 
-        default: Date.now }
+        default: Date.now 
+    }
 })
 
 

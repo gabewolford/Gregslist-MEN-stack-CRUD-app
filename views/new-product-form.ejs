@@ -27,11 +27,11 @@
             <label for="category">Category</label>
             <select id="category" name="category" required>
                 <option value="">Select One</option>
-                <option value="yachts">Yachts</option>
-                <option value="private jets">Private Jets</option>
-                <option value="luxury cars">Luxury Cars</option>
-                <option value="private islands">Private Islands</option>
-                <option value="residences">Residences</option>
+                <option value="Yachts">Yachts</option>
+                <option value="Private Jets">Private Jets</option>
+                <option value="Luxury Cars">Luxury Cars</option>
+                <option value="Private Islands">Private Islands</option>
+                <option value="Residences">Residences</option>
             </select>
           
             <label for="photo">Photo</label>
@@ -40,9 +40,9 @@
             <label for="condition">Condition</label>
             <select id="condition" name="condition" required>
                 <option value="">Select One</option>
-                <option value="new" <% if (product.condition === 'new') { %> selected <% } %>>New</option>
-                <option value="excellent" <% if (product.condition === 'excellent') { %> selected <% } %>>Excellent</option>
-                <option value="good" <% if (product.condition === 'good') { %> selected <% } %>>Good</option>
+                <option value="New">New</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
             </select>
           
             <label for="askingPrice">Asking Price</label>
@@ -52,7 +52,11 @@
             <input type="number" id="quantity" name="quantity" min=0 required>
           
             <label for="isFeatured">Featured?</label>
-            <input type="checkbox" id="isFeatured" name="isFeatured" value="true">
+            <select id="isFeatured" name="isFeatured" required>
+                <option value="">Select One</option>
+                <option value="true" <% if (product.isFeatured === true) { %> selected <% } %>>Yes</option>
+                <option value="false" <% if (product.isFeatured === false) { %> selected <% } %>>No</option>
+            </select>
           
             <button type="submit">Submit</button>
           </form>

@@ -25,11 +25,11 @@
           
             <label for="category">Category</label>
             <select id="category" name="category" required>
-                <option value="yachts" <% if (product.category === 'yachts') { %> selected <% } %>>Yachts</option>
-                <option value="private jets" <% if (product.category === 'private jets') { %> selected <% } %>>Private Jets</option>
-                <option value="luxury cars" <% if (product.category === 'luxury cars') { %> selected <% } %>>Luxury Cars</option>
-                <option value="private islands" <% if (product.category === 'private islands') { %> selected <% } %>>Private Islands</option>
-                <option value="residences" <% if (product.category === 'residences') { %> selected <% } %>>Residences</option>
+                <option value="Yachts" <% if (product.category === 'Yachts') { %> selected <% } %>>Yachts</option>
+                <option value="Private Jets" <% if (product.category === 'Private Jets') { %> selected <% } %>>Private Jets</option>
+                <option value="Luxury Cars" <% if (product.category === 'Luxury Cars') { %> selected <% } %>>Luxury Cars</option>
+                <option value="Private Islands" <% if (product.category === 'Private Islands') { %> selected <% } %>>Private Islands</option>
+                <option value="Residences" <% if (product.category === 'Residences') { %> selected <% } %>>Residences</option>
             </select>
           
             <label for="photo">Photo</label>
@@ -37,9 +37,9 @@
           
             <label for="condition">Condition</label>
             <select id="condition" name="condition" required>
-                <option value="new" <% if (product.condition === 'new') { %> selected <% } %>>New</option>
-                <option value="excellent" <% if (product.condition === 'excellent') { %> selected <% } %>>Excellent</option>
-                <option value="good" <% if (product.condition === 'good') { %> selected <% } %>>Good</option>
+                <option value="New" <% if (product.condition === 'New') { %> selected <% } %>>New</option>
+                <option value="Excellent" <% if (product.condition === 'Excellent') { %> selected <% } %>>Excellent</option>
+                <option value="Good" <% if (product.condition === 'Good') { %> selected <% } %>>Good</option>
             </select>
           
             <label for="askingPrice">Asking Price</label>
@@ -49,9 +49,11 @@
             <input type="number" id="quantity" name="quantity" min=0 value="<%= product.quantity %>" required>
           
             <label for="isFeatured">Featured?</label>
-            <input type="checkbox" id="isFeatured" name="isFeatured"<% if (product.isFeatured === true) { %> checked <% } %> >
+            <select id="isFeatured" name="isFeatured" required>
+                <option value="true" <% if (product.isFeatured === true) { %> selected <% } %>>Yes</option>
+                <option value="false" <% if (product.isFeatured === false) { %> selected <% } %>>No</option>
+            </select>
                 
-
             <button type="submit">Save Changes</button>
           </form>
 
