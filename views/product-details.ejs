@@ -10,11 +10,12 @@
         <div class="row">
                 <img src="<%= product.photo %>">
                 <h4><%= product.name %> - <%= product.condition %></h4>
-                <p>$<%= product.askingPrice %></p>
+                <p>$<%= product.askingPrice %>.00</p>
                 <p><%= product.city %> <%= product.state %></p>
                 <p><%= product.country %></p>
                 <p>Available: <%= product.quantity %></p>
                 <p><%= product.description %></p>
+                <p>Date Listed: <%= product.dateListed.toLocaleDateString() %></p>
         </div>
 
         <div>
